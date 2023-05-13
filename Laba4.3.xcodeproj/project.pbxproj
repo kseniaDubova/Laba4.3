@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AA396F772A06FC95001FC062 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AA396F762A06FC95001FC062 /* main.cpp */; };
 		AA396F7F2A070396001FC062 /* Graph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AA396F7D2A070396001FC062 /* Graph.cpp */; };
+		AA396F952A10206B001FC062 /* ESetErrors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AA396F932A10206B001FC062 /* ESetErrors.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		AA396F762A06FC95001FC062 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		AA396F7D2A070396001FC062 /* Graph.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Graph.cpp; sourceTree = "<group>"; };
 		AA396F7E2A070396001FC062 /* Graph.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Graph.hpp; sourceTree = "<group>"; };
+		AA396F932A10206B001FC062 /* ESetErrors.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ESetErrors.cpp; sourceTree = "<group>"; };
+		AA396F942A10206B001FC062 /* ESetErrors.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ESetErrors.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,8 @@
 				AA396F762A06FC95001FC062 /* main.cpp */,
 				AA396F7D2A070396001FC062 /* Graph.cpp */,
 				AA396F7E2A070396001FC062 /* Graph.hpp */,
+				AA396F932A10206B001FC062 /* ESetErrors.cpp */,
+				AA396F942A10206B001FC062 /* ESetErrors.hpp */,
 			);
 			path = Laba4.3;
 			sourceTree = "<group>";
@@ -125,6 +130,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA396F7F2A070396001FC062 /* Graph.cpp in Sources */,
+				AA396F952A10206B001FC062 /* ESetErrors.cpp in Sources */,
 				AA396F772A06FC95001FC062 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
