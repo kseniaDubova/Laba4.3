@@ -35,12 +35,13 @@ int muny()
     cout << "7 - degree of vertex"<< endl;
     cout << "8 - order" << endl;
     cout << "9 - walk"<< endl;
-    cout << "10 - find emergency room" << endl;
-    cout << "11 - print"<< endl;
-    cout << "12 - go out"<< endl;
+    cout << "10 - dijkstra"<< endl;
+    cout << "11 - find emergency room" << endl;
+    cout << "12 - print"<< endl;
+    cout << "13 - go out"<< endl;
     cout << "Operation №";
     int n = check();
-    while (n > 12 || n <= 0)
+    while (n > 13 || n <= 0)
     {
         cout << "Incorrect value" << endl << "Operation №";
         n = check();
@@ -145,20 +146,54 @@ void print(Graph& obj)
     getchar();
 }
 
+void dijkstra(Graph& obj)
+{
+    cout << "What vertex?" << endl;
+    cout << "from: ";
+    int from = check();
+    cout << "to: ";
+    int to = check();
+    int weight;
+    vector<int> res = obj.shortest_path(from, to, weight);
+    if(weight == INT_MAX)
+        cout << "has not way";
+    else
+    {
+        cout << "WEight = " << weight << endl;
+        cout << "Way:" << endl;
+        for(auto i: res)
+        {
+            cout << i << "->";
+        }
+        cout << "finish";
+    }
+    getchar();
+}
+
+void emergency(Graph& obj)
+{
+    cout << "emergency room is " << obj.emergency();
+    getchar();
+}
 
 int main()
 {
     Graph g;
     g.add_vertex(6);
     g.add_vertex(7);
-    g.add_vertex(8);
-    g.add_edge(6, 7, 7);
-    g.add_edge(7, 8, 7);
-    g.add_edge(8, 7, 7);
-    void (*operatoin[10])(Graph& obj) = {add_vertex,add_edge,find_vertex,find_edge,delete_vertex,delete_edge,degree,order,walk,print};
+    g.add_vertex(4);
+    g.add_vertex(1);
+    g.add_edge(7, 1, 1);
+    g.add_edge(6, 4, 2);
+    g.add_edge(4, 7, 20);
+    g.add_edge(4, 6, 6);
+//    vector<int> result = g.shortest_path(6, 10);
+    
+    
+    void (*operatoin[12])(Graph& obj) = {add_vertex,add_edge,find_vertex,find_edge,delete_vertex,delete_edge,degree,order,walk,dijkstra,emergency,print};
     int n = muny();
     getchar();
-    while (n < 12)
+    while (n < 13)
     {
         try {
             operatoin[n - 1](g);
